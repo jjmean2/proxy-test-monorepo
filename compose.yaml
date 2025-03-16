@@ -1,0 +1,4 @@
+include:
+  - apps/my-koa-app/compose.yaml
+  - apps/my-next14-app/compose.yaml
+  - apps/nginx-proxy/compose.yaml

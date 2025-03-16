@@ -1,0 +1,12 @@
+name: koa-app
+services:
+  koa-app:
+    build:
+      context: ../..
+      target: my-koa-app
+    ports:
+      - "8001:8001"
+    develop:
+      watch:
+        - path: .
+          action: rebuild
