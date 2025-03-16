@@ -4,7 +4,7 @@ services:
     container_name: next14-app
     build:
       context: ../..
-      target: my-next14-app
+      target: next14-app
     ports:
       - "8000:8000"
     develop:
