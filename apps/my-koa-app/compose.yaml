@@ -1,6 +1,7 @@
 name: koa-app
 services:
   koa-app:
+    container_name: koa-app
     build:
       context: ../..
       target: my-koa-app

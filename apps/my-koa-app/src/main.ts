@@ -14,7 +14,9 @@ const app = new Koa();
 const router = new Router();
 
 router.all("(.*)", (ctx) => {
+  console.log("🚀", `[${ctx.request.method}]`, ctx.request.url);
   ctx.body = {
+    remoteAddress: ctx.request.socket.remoteAddress,
     url: ctx.request.url,
     headers: ctx.request.headers,
   };

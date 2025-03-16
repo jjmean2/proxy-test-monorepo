@@ -1,6 +1,7 @@
 name: next14-app
 services:
   next14-app:
+    container_name: next14-app
     build:
       context: ../..
       target: my-next14-app
