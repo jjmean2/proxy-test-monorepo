@@ -3,6 +3,9 @@ services:
   proxy1:
     image: nginx:1.27-alpine-slim
     container_name: proxy1
+    networks:
+      frontend:
+        ipv4_address: 192.168.1.10
     ports:
       - "9000:80"
     volumes:
@@ -14,6 +17,9 @@ services:
   proxy2:
     image: nginx:1.27-alpine-slim
     container_name: proxy2
+    networks:
+      frontend:
+        ipv4_address: 192.168.1.11
     ports:
       - "9001:80"
     volumes:
@@ -25,6 +31,9 @@ services:
   proxy3:
     image: nginx:1.27-alpine-slim
     container_name: proxy3
+    networks:
+      frontend:
+        ipv4_address: 192.168.1.12
     ports:
       - "9002:80"
     volumes:

@@ -1,10 +1,13 @@
 name: next14-app
 services:
   next14-app:
-    container_name: next14-app
     build:
       context: ../..
       target: next14-app
+    container_name: next14-app
+    networks:
+      frontend:
+        ipv4_address: 192.168.1.13
     ports:
       - "8000:8000"
     develop:
